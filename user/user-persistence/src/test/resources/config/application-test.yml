@@ -1,0 +1,22 @@
+
+spring:
+  datasource:
+    driver-class-name: org.hsqldb.jdbcDriver
+    url: jdbc:hsqldb:mem:verychic;sql.syntax_mys=true
+    username: sa
+    password: sa
+    platform: hsqldb
+    generate-unique-name: true
+  jpa:
+    database-platform: org.hibernate.dialect.HSQLDialect
+    hibernate.ddl-auto: update
+    database: HSQL
+    show-sql: true
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  data:
+    jpa:
+      repositories:
+        enabled: true
